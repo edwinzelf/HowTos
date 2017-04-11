@@ -1,5 +1,5 @@
 Drie onderdelen:
-- [NGINX](#NGINX) 
+- [NGINX](#NGINX)
 - [Let's Encrypt](#letsencrypt)
 - [Fail2ban](#Fail2ban)
 
@@ -17,8 +17,11 @@ Drie onderdelen:
 `sudo ln -s /etc/nginx/sites-available/xxx /etc/nginx/sites-enabled/`
 ## install
 `sudo apt-get install nginx`
+
 `cd /etc/nginx`
+
 `sudo openssl dhparam -out dh2048.pem 2048`
+
 `sudo nano perfect-forward-secrecy.conf`
 ```
 ssl ciphers "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS";
