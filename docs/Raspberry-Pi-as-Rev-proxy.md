@@ -211,7 +211,7 @@ Fail2ban kijkt in error logs van nginx of foutief wordt ingelogd op nginx. Als d
 ### Install
 `sudo apt-get install fail2ban -y`
 ### Config files
-`nano /etc/fail2ban/filter.d/nginx-auth.conf`
+`sudo nano /etc/fail2ban/filter.d/nginx-auth.conf`
 ```
 [Definition]
 failregex = no user/password was provided for basic authentication.*client: <HOST>
@@ -220,8 +220,8 @@ failregex = no user/password was provided for basic authentication.*client: <HOS
 
 ignoreregex = </host></host></host>
 ```
-`mkdir -p /etc/fail2ban/jail.d`
-`nano /etc/fail2ban/jail.d/nginx-auth.conf`
+`sudo mkdir -p /etc/fail2ban/jail.d`
+`sudo nano /etc/fail2ban/jail.d/nginx-auth.conf`
 ```
 [nginx-auth]
 enabled = true
